@@ -1,0 +1,30 @@
+{
+  "name": "nextjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-End-Hero/NEXT.JS-tutorial.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-End-Hero/NEXT.JS-tutorial/issues"
+  },
+  "homepage": "https://github.com/The-End-Hero/NEXT.JS-tutorial#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "^2.4.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
