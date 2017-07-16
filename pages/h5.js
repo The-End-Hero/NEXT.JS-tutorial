@@ -20,6 +20,16 @@ import fetch from 'isomorphic-unfetch'
 //         </ul>
 //     </Layout>
 // )
+const content = (props)=>{
+    console.log(`content props: ${props}`)
+    return (
+        <div>
+            <img src={props.coverImgUrl} alt=""/>
+            <p>{props.title}</p>
+            <p>{props.tags.replace(/,/g,'/')}</p>
+        </div>
+    )
+}
 
 class Index extends React.Component{
     constructor(props,context){
@@ -36,9 +46,11 @@ class Index extends React.Component{
             innerbox.push(
                 <li key={i}>
                     <Link as={`/T/${this.state.shows[i].recommendationData.id}`} href={`/h5article?id=${this.state.shows[i].recommendationData.id}`}>
-                        <img src={this.state.shows[i].recommendationData.coverImgUrl} alt=""/>
+                        {/*<img src={this.state.shows[i].recommendationData.coverImgUrl} alt=""/>*/}
                         {/*<p>{this.state.shows[i].recommendationData.title}</p>*/}
                         {/*<p>{this.state.shows[i].recommendationData.tags.replace(/,/g,'/')}</p>*/}
+                        {/*<content result={this.state.shows[i].recommendationData}/>*/}
+                        {content(this.state.shows[i].recommendationData)}
                     </Link>
                 </li>
             )
@@ -59,7 +71,7 @@ Index.getInitialProps = async function () {
     const res = await fetch('http://127.0.0.1:8888/123')
     const data = await res.json()
 
-    console.log(`Show data fetched. Count: ${data.length}`)
+    console.log(`Show data fetched. 123123: ${data}`)
 
     return{
         shows:data.dataMap
