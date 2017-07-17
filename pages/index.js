@@ -1,9 +1,12 @@
 import Layout from '../components/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import stylesheet from 'styles/index.scss'
 
 const Index = (props) => (
-    <Layout>
+    <Layout title='index主页'>
+        {/*<style dangerouslySetInnerHTML={{__html:stylesheet}}/>*/}
+        <style jsx global>{stylesheet}</style>
         <h1>Batman  TV Show</h1>
         <ul>
             {props.shows.map(({show})=>(

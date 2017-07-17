@@ -3,9 +3,11 @@
  */
 import Layout from '../components/MyLayout.js'
 import fetch from 'isomorphic-unfetch'
+import stylesheet from 'styles/h5article.scss'
 
 const h5article = (props)=>(
-    <Layout>
+    <Layout title='h5 文章页'>
+        <style jsx global>{stylesheet}</style>
         <h1>{props.show.dataMap.title}</h1>
         <div>{props.show.dataMap.tags.replace(/,/g,'/')}</div>
         <div dangerouslySetInnerHTML={{__html: props.show.dataMap.content}}></div>

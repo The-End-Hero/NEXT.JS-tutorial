@@ -56,7 +56,7 @@ class Index extends React.Component{
             )
         }
         return(
-            <Layout>
+            <Layout title='h5 主页'>
                 <ul>
                     {innerbox}
                 </ul>

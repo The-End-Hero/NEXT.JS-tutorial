@@ -21,10 +21,21 @@
   },
   "homepage": "https://github.com/The-End-Hero/NEXT.JS-tutorial#readme",
   "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-wrap-in-js": "^1.1.1",
     "express": "^4.15.3",
+    "glob": "^7.1.2",
     "isomorphic-unfetch": "^2.0.0",
     "next": "^2.4.7",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "nprogress": "^0.2.0",
+    "postcss-easy-import": "^2.1.0",
+    "postcss-loader": "^2.0.6",
+    "raw-loader": "^0.5.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "sass-loader": "^6.0.6"
   }
 }
