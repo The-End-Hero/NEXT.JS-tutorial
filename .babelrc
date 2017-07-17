@@ -13,7 +13,8 @@
       {
         "extensions": ["css$", "scss$"]
       }
-    ]
+    ],
+    "transform-decorators-legacy"
   ],
   "presets": [
     "next/babel"
