@@ -1,6 +1,13 @@
 h1{
   font-size: 20px;
   color: red;
+  &:hover{
+    color: greenyellow;
+  }
+  &:before{
+    content: 'before';
+
+  }
 }
 p{
   background: gray;

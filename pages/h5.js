@@ -3,7 +3,6 @@
  */
 import Layout from '../components/MyLayout.js'
 import Link from 'next/link'
-// import React from 'react'
 import fetch from 'isomorphic-unfetch'
 //
 // const Index = (props) => (
@@ -44,7 +43,7 @@ class Index extends React.Component{
         console.log(this.state.shows)
         for(let i=0;i<this.state.shows.length; i++ ){
             innerbox.push(
-                <li key={i}>
+                <li key={this.state.shows[i].recommendationData.id}>
                     <Link as={`/T/${this.state.shows[i].recommendationData.id}`} href={`/h5article?id=${this.state.shows[i].recommendationData.id}`}>
                         {/*<img src={this.state.shows[i].recommendationData.coverImgUrl} alt=""/>*/}
                         {/*<p>{this.state.shows[i].recommendationData.title}</p>*/}
