@@ -27,6 +27,9 @@ const Header = () => (
         <Link href="/mobx">
             <a style={linkStyle}>mobx</a>
         </Link>
+        <Link href="/mobxarticle">
+            <a style={linkStyle}>mobxarticle</a>
+        </Link>
     </div>
 )
 

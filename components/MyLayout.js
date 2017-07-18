@@ -1,19 +1,18 @@
 import Header from './Header'
 import Head from 'next/head'// 自定义head seo之中非常重要
-import { inject, observer } from 'mobx-react'
+// import { inject, observer } from 'mobx-react'
 
 const layoutStyle = {
   margin: 20,
   padding: 20,
   border: '1px solid #DDD'
 }
-@inject('store') @observer
+
 class Layout extends React.Component {
     constructor(props){
         super(props)
     }
     componentDidMount () {
-        this.props.store.start()
     }
     render(){
         return(
