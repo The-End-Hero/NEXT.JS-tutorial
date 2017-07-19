@@ -8,6 +8,7 @@ import fetch from 'isomorphic-unfetch'
 let store = null
 
 class Store {
+
     @observable mobx = 555555555555
     constructor (isServer, result) {
         this.mobx = result
