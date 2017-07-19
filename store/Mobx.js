@@ -13,7 +13,13 @@ export class Mobx extends Store{
         console.log(2222)
         super.mobx='sssssssss'
     }
+    rrrr(){
+        super.sss()
+
+    }
     @action initmobx = async() => {
+        // console.log(`super.indexstore${super.sss()}`)
+        // console.log(`super.indexstore${super.indexstore()}`)
         console.log(`Mobx.__proto__===Store:${Mobx.__proto__===Store}`)
         console.log(`${Mobx.__proto__.__proto__===Store}`)
         console.log(`${Mobx.prototype.sss()}`)

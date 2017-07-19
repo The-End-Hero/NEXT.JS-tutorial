@@ -12,12 +12,18 @@ export default class Store {
     @observable mobxarticle = {}
     @observable mobx = {}
     constructor () {
+        // this.indexstore = observable({'mock':233333})
         // this.mobxarticle = result
         // this.mobx = 'macaline'
         // this.mobx
         // this.mobxarticle
     }
-    sss(){return 123}
+    indexstore = observable({
+        mock:'889889'
+    })
+    sss(){
+        console.log('macaline    66666')
+    }
     // @action initmobxarticle = async(id) => {
     //     const res = await fetch(`http://127.0.0.1:8888/articledetail/${id}`)
     //     const req = await res.json()

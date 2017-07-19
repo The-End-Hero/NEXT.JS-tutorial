@@ -73,6 +73,7 @@ Index.getInitialProps = async function ({req}) {
     console.log(`store: ${JSON.stringify(store)}`)
     console.log(456)
     store.mobx = await new mobxaction().initmobx()
+    await new mobxaction().rrrr()
     console.log(`store=======${JSON.stringify(store)}`)
     const shows = store.mobx
     console.log(`shows=======${JSON.stringify(shows)}`)
