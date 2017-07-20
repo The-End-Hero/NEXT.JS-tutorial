@@ -19,7 +19,7 @@ export default class Store {
         // this.mobxarticle
     }
     indexstore = observable({
-        mock:'889889'
+        mock:'macaline 889889'
     })
     sss(){
         console.log('macaline    66666')

@@ -14,7 +14,7 @@ export class Mobx extends Store{
         super.mobx='sssssssss'
     }
     rrrr(){
-        super.sss()
+        super.indexstore()
 
     }
     @action initmobx = async() => {
