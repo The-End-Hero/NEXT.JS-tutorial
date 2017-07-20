@@ -33,6 +33,9 @@ const Header = () => (
         <Link href="/simple">
             <a style={linkStyle}>simple</a>
         </Link>
+        <Link href="/store001">
+            <a style={linkStyle}>store001</a>
+        </Link>
     </div>
 )
 
