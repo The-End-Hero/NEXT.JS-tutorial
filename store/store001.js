@@ -17,14 +17,17 @@ export default class Store {
     constructor (isServer, result) {
         this.mobx=result
     }
-    indexstore = observable({
-        mock:'macaline 889889'
-    })
+    // indexstore = observable({
+    //     mock:'macaline 889889'
+    // })
     @action getdata = async()=>{
         const res = await fetch(`http://127.0.0.1:8888/simple`)
         const req = await res.json()
         // console.log(`class simpleStore req===${JSON.stringify(req)}`)
         this.mobx = await req
+    }
+    @action change = ()=>{
+        this.mobx.code++
     }
     sss(){
         console.log('macaline    66666')
