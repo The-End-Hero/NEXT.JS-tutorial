@@ -14,7 +14,8 @@
         "extensions": ["css$", "scss$"]
       }
     ],
-    "transform-decorators-legacy"
+    "transform-decorators-legacy",
+    ["transform-define", "./env-config.js"]
   ],
   "presets": [
     "next/babel"

@@ -17,11 +17,13 @@ class store001 extends React.Component{
         console.log(`this.store-----${JSON.stringify(this.store)}`)
     }
     get(){
+        document.cookie='name_123='+'sdsdevewssss'
         this.store.change()
         fetch(`http://127.0.0.1:8888/login`,{
+            credentials: 'include',
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ username: `hello username !` })
         })
@@ -36,6 +38,7 @@ class store001 extends React.Component{
                     <h1 onClick={this.get.bind(this)}>
                         {/*{this.props.result.indexstore.mock}*/}
                         {this.store.mobx.code}
+                        {BACKEND_URL}
                     </h1>
                 </div>
             </Provider>

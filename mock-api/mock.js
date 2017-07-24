@@ -8,12 +8,12 @@ var cors = require('cors');
 app.use(cors());
 // post 参数
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 app.use(bodyParser.json());
+app.use(cookieParser());
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
-app.post('/login', urlencodedParser, function (req, res) {
-    if (!req.body) return res.sendStatus(400)
-    res.send('welcome, ' + req.body.username)
-})
+
+
 //设置跨域访问
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -23,6 +23,14 @@ app.all('*', function(req, res, next) {
     res.header("Content-Type", "application/json;charset=utf-8");
     next();
 });
+app.post('/login', urlencodedParser, function (req, res) {
+    if (!req.body) return res.sendStatus(400)
+    //验证code....
+    // res.send('welcome, ' + req.body.username)
+    console.log(req.cookies)
+    console.log(res.cookies)
+    res.json({code:200,msg:'welcome Nick Yang !!!'})
+})
 var questions={
     "code": "200",
     "message": null,

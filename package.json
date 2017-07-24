@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server.js",
+    "dev": "concurrently \"npm run mock\" \" npm run development\"",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "mock": "node mock-api/mock.js",
+    "development": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -45,6 +47,9 @@
   },
   "devDependencies": {
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "body-parser": "^1.17.2"
+    "babel-plugin-transform-define": "^1.3.0",
+    "body-parser": "^1.17.2",
+    "concurrently": "^3.5.0",
+    "cookie-parser": "^1.4.3"
   }
 }
