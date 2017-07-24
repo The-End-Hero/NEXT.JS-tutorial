@@ -6,6 +6,7 @@ import { observable,action } from 'mobx'
 import { Provider } from 'mobx-react'
 import {initStore} from '../store/store001'
 import { observer,inject } from 'mobx-react'
+import fetch from 'isomorphic-unfetch'
 
 @observer
 class store001 extends React.Component{
@@ -17,6 +18,13 @@ class store001 extends React.Component{
     }
     get(){
         this.store.change()
+        fetch(`http://127.0.0.1:8888/login`,{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username: `hello username !` })
+        })
     }
     render(){
         console.log(`this.props------${JSON.stringify(this.props)}`)

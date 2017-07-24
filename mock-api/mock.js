@@ -4,6 +4,16 @@
 var express=require('express');
 var app =express();
 
+var cors = require('cors');
+app.use(cors());
+// post 参数
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.post('/login', urlencodedParser, function (req, res) {
+    if (!req.body) return res.sendStatus(400)
+    res.send('welcome, ' + req.body.username)
+})
 //设置跨域访问
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -344,7 +354,10 @@ app.get('/simple',function(req,res){
     res.status(200),
         res.json(simple)
 });
-
+app.get('/simple',function(req,res){
+    res.status(200),
+        res.json(simple)
+});
 //配置服务端口
 var server = app.listen(8888, function () {
 
