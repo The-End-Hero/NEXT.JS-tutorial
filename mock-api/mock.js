@@ -16,19 +16,27 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //设置跨域访问
 app.all('*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header('Access-Control-Allow-Credentials', true)
+    res.header("Access-Control-Allow-Origin", "http://127.0.0.1:3000");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With,Content-Type");
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     res.header("X-Powered-By",' 3.2.1');
     res.header("Content-Type", "application/json;charset=utf-8");
+
     next();
 });
 app.post('/login', urlencodedParser, function (req, res) {
+    if (req.method == 'OPTIONS') {
+        console.log(`i'm OPTIONS`)
+        res.header("Access-Control-Allow-Origin", "http://127.0.0.1:3000");
+        return res.sendStatus(200); //让options请求快速返回
+    }
     if (!req.body) return res.sendStatus(400)
+    res.header("Access-Control-Allow-Origin", "http://127.0.0.1:3000");
     //验证code....
     // res.send('welcome, ' + req.body.username)
-    console.log(req.cookies)
-    console.log(res.cookies)
+    console.log('req.cookies'+JSON.stringify(req.cookies))
+    console.log('res.cookies'+JSON.stringify(res.cookies))
     res.json({code:200,msg:'welcome Nick Yang !!!'})
 })
 var questions={

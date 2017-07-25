@@ -43,6 +43,7 @@
     "raw-loader": "^0.5.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-lazyload": "^2.2.7",
     "sass-loader": "^6.0.6"
   },
   "devDependencies": {
