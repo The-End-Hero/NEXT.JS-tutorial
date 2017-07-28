@@ -3,7 +3,7 @@ const compression = require('compression')
 const next = require('next')
 
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const app = next({dev:dev})
 const handle = app.getRequestHandler()
 
 app.prepare()

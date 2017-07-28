@@ -18,7 +18,8 @@
     ["transform-define", "./env-config.js"]
   ],
   "presets": [
-    "next/babel"
+    "next/babel",
+    "stage-0"
   ],
   "ignore": []
 }

@@ -16,7 +16,6 @@ const content = (props)=>{
     console.log(`content props: ${props}`)
     return (
         <div>
-            {MOCK_API_123}
             <img src={props.coverImgUrl} alt=""/>
             <p>{props.title}</p>
             <p>{props.tags.replace(/,/g,'/')}</p>
