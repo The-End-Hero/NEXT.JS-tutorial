@@ -1,6 +1,9 @@
 /**
+ *
  * Created by xiping.wang on 2017/7/25.
  */
+
+
 const Place = ()=>{
     return(
         <div>

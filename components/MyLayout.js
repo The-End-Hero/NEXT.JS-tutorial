@@ -20,6 +20,7 @@ class Layout extends React.Component {
                 <Head>
                     <title>{ this.props.title }</title>
                     <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
+                    <link rel='stylesheet' type='text/css' href='https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css'/>
                     <meta charSet='utf-8' />
                     <meta name='viewport' content='initial-scale=1.0, width=device-width' />
                 </Head>

@@ -1,4 +1,5 @@
 const express = require('express')
+const compression = require('compression')
 const next = require('next')
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -8,6 +9,7 @@ const handle = app.getRequestHandler()
 app.prepare()
 .then(() => {
   const server = express()
+    server.use(compression())
 
   server.get('/p/:id', (req, res) => {
     const actualPage = '/post'
