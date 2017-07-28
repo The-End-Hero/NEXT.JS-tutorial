@@ -4,6 +4,7 @@
 import Layout from '../components/MyLayout.js'
 import fetch from 'isomorphic-unfetch'
 import stylesheet from 'styles/h5article.scss'
+import env from '../env';
 
 const h5article = (props)=>(
     <Layout title='h5 文章页'>
@@ -17,7 +18,7 @@ const h5article = (props)=>(
 h5article.getInitialProps = async function (context) {
     const {id} = context.query
     // const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
-    const res = await fetch(`http://127.0.0.1:8888/articledetail/${id}`)
+    const res = await fetch(env.MOCK_API_ARTICLEDETAIL)
     const show = await res.json()
 
     console.log(`Fetched show : ${show}`)

@@ -4,21 +4,7 @@
 import Layout from '../components/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
-//
-// const Index = (props) => (
-//     <Layout>
-//         <h1>Batman  TV Show</h1>
-//         <ul>
-//             {props.shows.map(({show})=>(
-//                 <li key={show.recommendationData.id}>
-//                     <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
-//                         <a>{show.name}</a>
-//                     </Link>
-//                 </li>
-//             ))}
-//         </ul>
-//     </Layout>
-// )
+import env from '../env'
 const content = (props)=>{
     console.log(`content props: ${props}`)
     return (
@@ -45,10 +31,6 @@ class Index extends React.Component{
             innerbox.push(
                 <li key={this.state.shows[i].recommendationData.id}>
                     <Link as={`/T/${this.state.shows[i].recommendationData.id}`} href={`/h5article?id=${this.state.shows[i].recommendationData.id}`}>
-                        {/*<img src={this.state.shows[i].recommendationData.coverImgUrl} alt=""/>*/}
-                        {/*<p>{this.state.shows[i].recommendationData.title}</p>*/}
-                        {/*<p>{this.state.shows[i].recommendationData.tags.replace(/,/g,'/')}</p>*/}
-                        {/*<content result={this.state.shows[i].recommendationData}/>*/}
                         {content(this.state.shows[i].recommendationData)}
                     </Link>
                 </li>
@@ -66,8 +48,7 @@ class Index extends React.Component{
 
 Index.getInitialProps = async function () {
     console.log(123)
-    // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
-    const res = await fetch('http://127.0.0.1:8888/123')
+    const res = await fetch(env.GRAPHQL_ENDPOINT)
     const data = await res.json()
 
     console.log(`Show data fetched. 123123: ${data}`)

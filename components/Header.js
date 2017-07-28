@@ -27,12 +27,6 @@ const Header = () => (
         <Link href="/mobx">
             <a style={linkStyle}>mobx</a>
         </Link>
-        <Link href="/mobxarticle">
-            <a style={linkStyle}>mobxarticle</a>
-        </Link>
-        <Link href="/simple">
-            <a style={linkStyle}>simple</a>
-        </Link>
         <Link href="/store001">
             <a style={linkStyle}>store001</a>
         </Link>

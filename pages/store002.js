@@ -4,7 +4,7 @@
 import Layout from '../components/MyLayout.js'
 import { observable,action } from 'mobx'
 import { Provider } from 'mobx-react'
-import {initStore} from '../store/store001'
+import {initStore} from '../store/store'
 import { observer,inject } from 'mobx-react'
 import fetch from 'isomorphic-unfetch'
 

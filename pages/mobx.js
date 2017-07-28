@@ -8,10 +8,15 @@ import { Provider } from 'mobx-react'
 import LazyLoad  from 'react-lazyload';
 import stylesheet from 'styles/mobx.scss'
 import Place from '../components/placeholder'
+
+
+import env from '../env';
+
 const content = (props)=>{
     console.log(`content props: ${props}`)
     return (
         <div>
+            {MOCK_API_123}
             <img src={props.coverImgUrl} alt=""/>
             <p>{props.title}</p>
             <p>{props.tags.replace(/,/g,'/')}</p>
@@ -77,7 +82,7 @@ class Index extends React.Component{
     }
 }
 Index.getInitialProps = async function ({req}) {
-    const res = await fetch('http://127.0.0.1:8888/123')
+    const res = await fetch(env.GRAPHQL_ENDPOINT)
     const data = await res.json()
     return{shows: data}
 }
