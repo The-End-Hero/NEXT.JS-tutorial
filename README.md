@@ -47,4 +47,5 @@ store是状态管理，localstorage是数据存储。
 
 介于vue中使用object.defineproperty导致属性监听失败的坑（监听是注册的时候对属性批量使用Object.defineProperty方法实现的，所以后添加的属性不会监听），对mobx会不会遇到持怀疑态度。
 
-#### env-config.js根据开发环境不同设置生成不同的变量等。
+#### env-config.js根据开发环境不同设置生成不同的变量等。（废弃）
+- 使用更好的方案env.js根据写入环境判断
