@@ -49,3 +49,12 @@ store是状态管理，localstorage是数据存储。
 
 #### env-config.js根据开发环境不同设置生成不同的变量等。（废弃）
 - 使用更好的方案env.js根据写入环境判断
+
+
+
+### 使用git子模块管理
+
+具体参考
+
+[Git  Submodule]: https://github.com/The-End-Hero/common	"Git  Submodule"
+
