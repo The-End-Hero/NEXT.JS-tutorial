@@ -54,7 +54,5 @@ store是状态管理，localstorage是数据存储。
 
 ### 使用git子模块管理
 
-具体参考
-
-[Git  Submodule]: https://github.com/The-End-Hero/common	"Git  Submodule"
+具体参考:https://github.com/The-End-Hero/common
 
