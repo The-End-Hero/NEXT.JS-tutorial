@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import NProgress from 'nprogress'
 import Router from 'next/router'
-
+import header from '/styles/header.scss'
 Router.onRouteChangeStart = (url) =>{
     console.log(`loading:${url}`)
     NProgress.start()
@@ -10,11 +10,13 @@ Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
 const linkStyle = {
-  marginRight: 15
+  marginRight: 15,
+    height: '100%'
 }
 
 const Header = () => (
-    <div>
+    <div className="header">
+        <style jsx global>{header}</style>
         <Link href="/">
           <a style={linkStyle}>Home</a>
         </Link>
