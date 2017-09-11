@@ -10,8 +10,8 @@ Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
 const linkStyle = {
-  marginRight: 15,
-    height: '100%'
+  // marginRight: 15,
+  //   height: '100%'
 }
 
 const Header = () => (
