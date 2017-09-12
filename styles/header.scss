@@ -1,4 +1,9 @@
 .header{
+  position: fixed;
+  width: calc(100vw - 292px);
+  min-width:876px;
+  left: 292px;
+  top: 0;
   height: 80px;
   background: #f1f1f1;
   display: flex;

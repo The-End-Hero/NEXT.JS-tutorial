@@ -1,5 +1,6 @@
 import Header from './Header'
 import Head from 'next/head'// 自定义head seo之中非常重要
+import Leftnav from './Leftnav'
 // import { inject, observer } from 'mobx-react'
 import base from 'styles/base.scss'
 // const layoutStyle = {
@@ -16,7 +17,7 @@ class Layout extends React.Component {
     }
     render(){
         return(
-            <div>
+            <div id="app">
                 <Head>
                     <title>{ this.props.title }</title>
                     <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
@@ -26,8 +27,11 @@ class Layout extends React.Component {
                     <meta charSet='utf-8' />
                     <meta name='viewport' content='initial-scale=1.0, width=device-width' />
                 </Head>
-                <Header />
-                {this.props.children}
+                <Leftnav />
+                <div className="rightnav">
+                    <Header />
+                    {this.props.children}
+                </div>
             </div>
         )
     }

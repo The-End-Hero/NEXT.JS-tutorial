@@ -14,3 +14,13 @@ li{
   margin: 0;
   padding: 0;
 }
+body{
+  min-width: 1168px;
+}
+#app{
+  .rightnav{
+    padding-left: 292px;
+    padding-top: 80px;
+    min-width:876px;
+  }
+}

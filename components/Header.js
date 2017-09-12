@@ -18,20 +18,21 @@ const Header = () => (
     <div className="header">
         <style jsx global>{header}</style>
         <Link href="/">
-          <a style={linkStyle}>Home</a>
+            <a style={linkStyle}>Home</a>
         </Link>
         <Link href="/about">
-          <a style={linkStyle}>About</a>
-        </Link>
-        <Link href="/h5">
-            <a style={linkStyle}>h5</a>
-        </Link>
-        <Link href="/mobx">
-            <a style={linkStyle}>mobx</a>
+            <a style={linkStyle}>JS/CSS/HTML</a>
         </Link>
         <Link href="/store001">
-            <a style={linkStyle}>store001</a>
+            <a style={linkStyle}>React</a>
         </Link>
+        <Link href="/mobx">
+            <a style={linkStyle}>HTTP</a>
+        </Link>
+        <Link href="/h5">
+            <a style={linkStyle}>Python</a>
+        </Link>
+
         <Link href="/store002">
             <a style={linkStyle}>store002</a>
         </Link>
